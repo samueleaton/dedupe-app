@@ -67,6 +67,9 @@ dedupeForm.addEventListener("submit", evt => {
       duplicateCountResult.textContent = res.data.duplicate_count
       dedupeArrBtn.classList.remove("processing")
     })
-    .catch(reqErr => console.error("reqErr: ", reqErr))
+    .catch(reqErr => {
+      console.error("reqErr: ", reqErr)
+      alert(reqErr.toString())
+    })
   }, 100)
 })
