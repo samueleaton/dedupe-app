@@ -1,2 +1,2 @@
 require "spec"
-require "../src/dedupe"
+require "../src/dedupe/remove_duplicates"

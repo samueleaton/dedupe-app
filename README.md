@@ -41,6 +41,15 @@ end
 Dedupe.remove_duplicates(["sameaton11@gmail.com", "sameaton11@gmail.com"])
 ```
 
+## Running Specs
+
+```
+# install crystal deps
+shards install
+# run specs
+crystal spec --release
+```
+
 ## Contributors
 
 - [Sam Eaton](https://github.com/samueleaton) - creator, maintainer
