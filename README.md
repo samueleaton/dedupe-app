@@ -43,4 +43,4 @@ Dedupe.remove_duplicates(["sameaton11@gmail.com", "sameaton11@gmail.com"])
 
 ## Contributors
 
-- [Sam Eaton](https://github.com/[your-github-name]) Sam Eaton - creator, maintainer
+- [Sam Eaton](https://github.com/samueleaton) - creator, maintainer
