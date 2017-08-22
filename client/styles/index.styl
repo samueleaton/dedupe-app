@@ -30,8 +30,6 @@ form
   &.generate-num-form
     input
       display inline-block
-      outline none
-      border 1px solid rgb(210,210,210)
       font-size 13px
       height 30px
       line-height 30px
@@ -40,6 +38,12 @@ form
       box-sizing border-box
       vertical-align top
       margin-right 10px
+      border 1px solid rgb(200,200,200)
+      outline none
+      border-radius 2px
+      transition border-color .2s
+      &:focus
+        border-color rgb(100,100,100)
     .warning
       font-size 13px
       margin 10px 0 0
@@ -92,6 +96,12 @@ textarea
   max-width 100%
   display block
   margin 10px 0
+  border 1px solid rgb(200,200,200)
+  outline none
+  border-radius 2px
+  transition border-color .2s
+  &:focus
+    border-color rgb(100,100,100)
 
 .forms-cont
   margin 20px 0

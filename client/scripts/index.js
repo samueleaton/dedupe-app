@@ -58,7 +58,15 @@ dedupeForm.addEventListener("submit", evt => {
   dedupeArrBtn.classList.add("processing")
   setTimeout(() => {
     const arr = textarea.value
-    axios.post("/dedupe", {data: JSON.parse(arr)})
+    let parsedArr = null
+    try {
+      parsedArr = JSON.parse(arr)
+    }
+    catch (jsonErr) {
+      dedupeArrBtn.classList.remove("processing")
+      return alert("Invalid JSON: " + jsonErr.toString())
+    }
+    axios.post("/dedupe", {data: parsedArr})
     .then(res => {
       const elapsedMilli = res.data.elapsed_milliseconds
       elapsedTimeResult.textContent = res.data.elapsed_time
@@ -69,7 +77,8 @@ dedupeForm.addEventListener("submit", evt => {
     })
     .catch(reqErr => {
       console.error("reqErr: ", reqErr)
-      alert(reqErr.toString())
+      dedupeArrBtn.classList.remove("processing")
+      alert(reqErr.toString() || "Error. Check that the JSON is valid")
     })
   }, 100)
 })
