@@ -1,0 +1,38 @@
+{
+  "name": "dedupe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sam Eaton <sam@eaton.party>",
+  "license": "MIT",
+  "scripts": {
+    "npm-run-all": "npm-run-all --parallel bundle:watch start:dev",
+    "start:dev": "shards install && ./sentry --info",
+    "bundle:watch": "webpack --watch --config webpack.config.js",
+    "bundle": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "axios": "^0.16.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.5",
+    "cssnano": "^3.10.0",
+    "cubbie-micro": "^1.0.6",
+    "eslint": "^4.5.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.3.0",
+    "npm-run-all": "^4.0.2",
+    "postcss-loader": "^2.0.6",
+    "preact": "^8.2.1",
+    "qs": "^6.5.0",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^3.5.5"
+  }
+}

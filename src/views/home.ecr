@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dedupe</title>
+</head>
+<body style="display:none;">
+  <div class="body-inner">
+    <h1>Dedupe</h1>
+    <h2>Removes Duplicates from Array of Strings</h2>
+
+    <div class="note">
+      <h2>Instructions</h2>
+      <p>Fill the text area with an array of strings or enter a number below and click "Generate List" to generate a list of strings of whatever size you'd like.</p>
+      <p>Once You are ready, click "Dedupe" below.</p>
+      <p>The array must be valid JSON.</p>
+    </div>
+
+    <div class="forms-cont">
+      <form id="generate-num-form" class="generate-num-form">
+        <label for="generate_number_input">Array Size (optional, for you convenience)</label>
+        <input id="generate_number_input" type="number" name="generate_number" min="0" placeholder="100" />
+        <button id="generate_number_btn" type="submit">Generate List</button><br />
+        <div class="warning">NOTE: Any size above 10,000 starts to slow down the browser. The server can process large lists like a champ, but the brower and network have a hard time. The server should still be able to process an array of 1,000,000 elements in less than a second, even if the browser takes 15+ seconds to prepare, send, and recieve the data.</div>
+      </form>
+      <form id="dedupe_form">
+        <label for="textarea">Array of Strings</label>
+        <textarea id="textarea">[
+  "sam@eaton.party",
+  "sam@eaton.party",
+  "other@gmail.com",
+  "finn@adventure.com"
+]</textarea>
+        <button id="dedupe-array-btn" type="submit" class="dedupe">Dedupe</button>
+      </form>
+    </div>
+
+    <div class="result-cont">
+      <h2>Result</h2>
+      <p>Note: Elapsed time refers to the time it takes for the server code to remove duplicates, not for the entire end-to-end transaction.</p>
+      <div class="result-row">
+        <div class="result-label">
+          Elapsed Time:
+        </div>
+        <div id="elapsed-time" class="result-value">-</div>
+      </div>
+
+      <div class="result-row">
+        <div class="result-label">
+          Elapsed Time (millisecond):
+        </div>
+        <div id="elapsed-millisecond" class="result-value">-</div>
+      </div>
+
+      <div class="result-row">
+        <div class="result-label">
+          Number of Duplicates:
+        </div>
+        <div id="duplicate-count" class="result-value">-</div>
+      </div>
+
+      <div class="result-row">
+        <div class="result-label">
+          Deduped Array:
+        </div>
+        <div id="deduped-array" class="result-value">-</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/js/dedupe.js"></script>
+</body>
+</html>

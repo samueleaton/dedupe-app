@@ -1,0 +1,88 @@
+GREEN = #14D976
+RED = #CE2626
+PURPLE = #6D33A1
+YELLOW = rgb(240, 252, 69)
+ORANGE = rgb(252,154,69)
+PINK = rgb(219, 50, 120)
+LIME = rgb(182, 253, 78)
+MIDNIGHT_BLUE = rgb(21,21,29)
+
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Poppins Light'), local('Poppins-Light'), url(https://fonts.gstatic.com/s/poppins/v2/MEXWGbc1EWORtBwy9fFeUgsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Poppins Light'), local('Poppins-Light'), url(https://fonts.gstatic.com/s/poppins/v2/D2gN9uyZ9Ucx1fJ1Fhb7swzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v2/w5uwZf-mdghB6LOAw_y9AFKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v2/HUuNgGR31mqIHE6zs0BlBgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v2/UGh2YG8gx86rRGiAZYIbVwsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v2/yQWaOD4iNU5NTY0apN-qjwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+FONT_STACK = "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+MONOSPACE_FONT_STACK = "andale mono", "courier new", monospace
+
+*.fade-in
+  opacity 1
+  animation fade_in .3s forwards ease
+
+@keyframes fade_in
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+*.spinner
+  height 16px
+  width 16px
+  box-sizing border-box
+  border 3px solid
+  border-left-color transparent
+  border-right-color transparent
+  border-bottom-color transparent
+  border-top-color GREEN
+  border-radius 50%
+  animation .5s __gf_rotate__ infinite linear
+
+@keyframes rotate
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
